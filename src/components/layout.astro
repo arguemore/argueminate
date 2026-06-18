@@ -445,6 +445,17 @@ a.meta-date:hover {
     border: 1px solid var(--background-hover);
 }
 
+a.meta-series {
+    color: var(--text-secondary);
+    border-color: var(--border-muted);
+    background: var(--background-hover);
+}
+
+a.meta-series:hover {
+    color: var(--text-primary);
+    background: var(--background);
+}
+
 /* tags */
 
 .tags-page {
@@ -461,21 +472,22 @@ a.meta-date:hover {
 
 footer {
     margin: 0;
-    padding-top: var(--spacing-08);
+    padding-top: var(--spacing-09);
+    padding-bottom: var(--spacing-10);
     text-align: center;
-    border-top: 0.188rem solid transparent;
-    border-image: url(/sep.svg) 30 round;
+    border-top: 0.125rem solid transparent;
+    border-image: url(/sep.svg) 28 round;
 }
 
 footer p {
     margin: 0;
     font-family: var(--serif-small);
-    display: inline-block;
-    font-size: inherit;
-    line-height: 1;
+    font-size: 0.95rem;
+    line-height: 1.4;
     text-align: center;
     color: var(--text-secondary-alt);
-    position: relative;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
     width: 100%;
 }
 

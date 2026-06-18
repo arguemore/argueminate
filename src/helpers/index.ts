@@ -17,4 +17,17 @@ export const tags = Array.from(
   ),
 ).sort();
 
+export const series = Array.from(
+  new Set(
+    posts
+      .map((post) => {
+        if (post.data.series) {
+          return [post.data.series];
+        }
+        return [];
+      })
+      .flat(),
+  ),
+).sort();
+
 export const years = Array.from(new Set(posts.map((post) => new Date(post.data.date).getFullYear().toString()))).sort();

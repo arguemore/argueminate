@@ -1,9 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../components/layout.astro";
-import Tag from "../../components/tag.astro";
 import DateTag from "../../components/date-tag.astro";
 import PostContent from "../../components/post/post-content.astro";
+import Series from "../../components/series.astro";
+import Tag from "../../components/tag.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -29,6 +30,7 @@ const { title, description, date, tags, cover } = post.data;
     </div>
     <div class="meta">
       <DateTag date={post.data.date} />
+      {post.data.series && <Series series={post.data.series} />}
       {post.data.tags?.map((tag) => <Tag tag={tag} />)}
     </div>
     {

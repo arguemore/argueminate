@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import DateTag from "../date-tag.astro";
+import Series from "../series.astro";
 import Tag from "../tag.astro";
 
 type Props = {
@@ -35,6 +36,7 @@ const { post } = Astro.props;
 
     <div class="meta">
       <DateTag date={post.data.date} />
+      {post.data.series && <Series series={post.data.series} />}
       {post.data.tags?.map((tag) => <Tag tag={tag} />)}
     </div>
 

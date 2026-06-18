@@ -1,0 +1,13 @@
+---
+type Props = {
+  series: string;
+};
+
+const { series } = Astro.props;
+---
+
+<a
+  href={`/series/${encodeURI(series)}`}
+  target="_self"
+  class="meta-series"
+>{series}</a>
