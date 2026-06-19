@@ -19,11 +19,6 @@ export const MENUS = [
     title: "Series",
     link: "/series",
     target: "_self",
-  },
-  {
-    title: "Download",
-    link: "https://new-ui.com/templates/journal",
-    target: "_blank",
   }
 ];
 
